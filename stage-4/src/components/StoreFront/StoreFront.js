@@ -6,6 +6,7 @@ import { addToShoppingCart, getAllProducts } from '../../redux/reducer';
 class StoreFront extends Component {
 
     componentDidMount() {
+        console.log(this.props)
         this.props.getAllProducts();
     }
 
@@ -37,4 +38,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {addToShoppingCart, getAllProducts})(StoreFront);
+export default connect(mapStateToProps, { addToShoppingCart, getAllProducts })(StoreFront);
